@@ -22,29 +22,82 @@ jobs:
     name: Verify debug build
     runs-on: ubuntu-24.04
     timeout-minutes: 60
+    env:
+      # Surface Duo generations 1 and 2 are ARM64. Avoid compiling the three
+      # unrelated upstream ABI variants in every required check.
+      BUILD_ABI: arm64-v8a
 
     steps:
-      - name: Check out source and submodules
+      - name: Check out source
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
-          submodules: recursive
+
+      - name: Classify changes
+        id: changes
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+
+          should_build=true
+          reason='manual run'
+
+          if [[ "$EVENT_NAME" == pull_request ]]; then
+            range="$BASE_SHA...$HEAD_SHA"
+          elif [[ "$EVENT_NAME" == push && ! "$BEFORE_SHA" =~ ^0+$ ]]; then
+            range="$BEFORE_SHA..$GITHUB_SHA"
+          else
+            range=''
+          fi
+
+          if [[ -n "$range" ]]; then
+            should_build=false
+            reason='documentation-only change'
+            while IFS= read -r -d '' path; do
+              case "$path" in
+                *.md|docs/*|.github/ISSUE_TEMPLATE/*)
+                  ;;
+                *)
+                  should_build=true
+                  reason="build input changed: $path"
+                  break
+                  ;;
+              esac
+            done < <(git diff --name-only -z "$range")
+          fi
+
+          echo "should_build=$should_build" >> "$GITHUB_OUTPUT"
+          echo "reason=$reason" >> "$GITHUB_OUTPUT"
+          echo "Android build: $should_build ($reason)" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Initialize submodules
+        if: steps.changes.outputs.should_build == 'true'
+        run: git submodule update --init --recursive
 
       - name: Install native build dependencies
+        if: steps.changes.outputs.should_build == 'true'
         run: |
           sudo apt-get update
           sudo apt-get install --yes extra-cmake-modules gettext
 
       - name: Set up Java
+        if: steps.changes.outputs.should_build == 'true'
         uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
 
       - name: Set up Android SDK
+        if: steps.changes.outputs.should_build == 'true'
         uses: android-actions/setup-android@v4
 
       - name: Install pinned Android toolchain
+        if: steps.changes.outputs.should_build == 'true'
         run: |
           sdkmanager \
             'platforms;android-36' \
@@ -53,24 +106,30 @@ jobs:
             'ndk;28.0.13004108'
 
       - name: Set up Gradle
+        if: steps.changes.outputs.should_build == 'true'
         uses: gradle/actions/setup-gradle@v6
 
       - name: Run unit tests
+        if: steps.changes.outputs.should_build == 'true'
         run: ./gradlew :app:testDebugUnitTest
 
       - name: Build app and Chewing plugin
+        if: steps.changes.outputs.should_build == 'true'
         run: ./gradlew :app:assembleDebug :plugin:chewing:assembleDebug
 
       - name: Run Android lint
+        if: steps.changes.outputs.should_build == 'true'
         # Fcitx's install tasks populate their native ABI model from the
         # external-native-build tasks. Keep assemble in this invocation so
         # lint's asset snapshot has that model available on a clean runner.
         run: ./gradlew :app:assembleDebug :app:lintDebug
 
       - name: Record APK checksums
+        if: steps.changes.outputs.should_build == 'true'
         run: find app plugin/chewing -path '*/build/outputs/apk/debug/*.apk' -type f -print0 | sort -z | xargs -0 sha256sum | tee apk-sha256.txt
 
       - name: Upload debug APKs
+        if: steps.changes.outputs.should_build == 'true'
         uses: actions/upload-artifact@v7
         with:
           name: duo-deck-debug-apks
