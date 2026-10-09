@@ -67,6 +67,8 @@ DUO-DE 是由 Archfx 與其貢獻者維護的第三方專案；此處只引用�
 
 從 [Releases](https://github.com/johnjohn1977/surface-duo-ime-notebook/releases) 下載 Duo Deck 主程式與 Chewing plugin APK，分別安裝後：
 
+Release APK 是針對 Surface Duo 的 `arm64-v8a` build。正式 tag 會由 GitHub Actions 從 `main` 上的相同 commit 重建、簽章、驗證並產生 SHA-256 清單。
+
 1. 在 Android 輸入法選擇器中手動啟用並選擇 **Duo Deck (Fcitx)**。
 2. 在無障礙設定中手動啟用 **Duo Deck Notebook**。
 
@@ -105,6 +107,8 @@ cd surface-duo-ime-notebook
 ```
 
 APK 會分別輸出到 `app/build/outputs/apk/debug/` 與 `plugin/chewing/build/outputs/apk/debug/`。APK 與本機簽章資料不會提交到原始碼版本庫。
+
+維護者的 tag 發版與 Android signing secret 設定請見 [發版指南](docs/RELEASING.md)。
 
 ## English
 
@@ -148,6 +152,8 @@ The Accessibility service does not retrieve window content, capture typed text, 
 
 Download both the Duo Deck app and Chewing plugin APKs from [Releases](https://github.com/johnjohn1977/surface-duo-ime-notebook/releases), install them, then:
 
+Release APKs are `arm64-v8a` builds for Surface Duo hardware. Every version tag is rebuilt, signed, verified, and checksummed by GitHub Actions from the same commit on `main`.
+
 1. Manually enable and select **Duo Deck (Fcitx)** in Android's input-method picker.
 2. Manually enable **Duo Deck Notebook** under Accessibility settings.
 
@@ -186,6 +192,8 @@ Run the unit tests, build the app and Chewing plugin, and run Android lint:
 ```
 
 The APKs are written below `app/build/outputs/apk/debug/` and `plugin/chewing/build/outputs/apk/debug/`. APKs and local signing material are intentionally excluded from source control.
+
+Maintainers should follow the [release guide](docs/RELEASING.md) for version tags and Android signing secrets.
 
 ## Project status / 專案狀態
 

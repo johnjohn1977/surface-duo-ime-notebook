@@ -1,0 +1,177 @@
+# SPDX-License-Identifier: LGPL-2.1-or-later
+# SPDX-FileCopyrightText: Copyright 2026 Surface Duo IME Notebook Contributors
+
+name: Android Release
+
+on:
+  push:
+    tags:
+      - 'v[0-9]*'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: android-release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Build signed release APKs
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      BUILD_ABI: arm64-v8a
+      EXPECTED_SIGN_CERT_SHA256: ${{ vars.ANDROID_SIGN_CERT_SHA256 }}
+
+    steps:
+      - name: Check out tagged source and submodules
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Verify tag belongs to main
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin main
+          if ! git merge-base --is-ancestor "$GITHUB_SHA" origin/main; then
+            echo 'Release tags must point to a commit contained in main.' >&2
+            exit 1
+          fi
+
+      - name: Verify signing configuration
+        env:
+          SIGN_KEY_BASE64: ${{ secrets.ANDROID_SIGN_KEY_BASE64 }}
+          SIGN_KEY_PWD: ${{ secrets.ANDROID_SIGN_KEY_PASSWORD }}
+          SIGN_KEY_ALIAS: ${{ secrets.ANDROID_SIGN_KEY_ALIAS }}
+        run: |
+          set -euo pipefail
+          test -n "$SIGN_KEY_BASE64" || { echo 'Missing ANDROID_SIGN_KEY_BASE64.' >&2; exit 1; }
+          test -n "$SIGN_KEY_PWD" || { echo 'Missing ANDROID_SIGN_KEY_PASSWORD.' >&2; exit 1; }
+          test -n "$SIGN_KEY_ALIAS" || { echo 'Missing ANDROID_SIGN_KEY_ALIAS.' >&2; exit 1; }
+          test -n "$EXPECTED_SIGN_CERT_SHA256" || { echo 'Missing ANDROID_SIGN_CERT_SHA256.' >&2; exit 1; }
+
+      - name: Set release version
+        run: echo "BUILD_VERSION_NAME=${GITHUB_REF_NAME#v}" >> "$GITHUB_ENV"
+
+      - name: Install native build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes extra-cmake-modules gettext
+
+      - name: Set up Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v4
+
+      - name: Install pinned Android toolchain
+        run: |
+          sdkmanager \
+            'platforms;android-36' \
+            'build-tools;36.1.0' \
+            'cmake;3.31.6' \
+            'ndk;28.0.13004108'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v6
+
+      - name: Test, lint, and build signed release APKs
+        env:
+          SIGN_KEY_BASE64: ${{ secrets.ANDROID_SIGN_KEY_BASE64 }}
+          SIGN_KEY_PWD: ${{ secrets.ANDROID_SIGN_KEY_PASSWORD }}
+          SIGN_KEY_ALIAS: ${{ secrets.ANDROID_SIGN_KEY_ALIAS }}
+        run: |
+          ./gradlew :app:testDebugUnitTest
+          ./gradlew \
+            :app:assembleRelease \
+            :plugin:chewing:assembleRelease \
+            :app:lintRelease
+
+      - name: Verify and stage release assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -d '' app_apks < <(find app/build/outputs/apk/release -maxdepth 1 -type f -name '*.apk' -print0)
+          mapfile -d '' chewing_apks < <(find plugin/chewing/build/outputs/apk/release -maxdepth 1 -type f -name '*.apk' -print0)
+          [[ ${#app_apks[@]} -eq 1 ]] || { echo "Expected one app APK, found ${#app_apks[@]}." >&2; exit 1; }
+          [[ ${#chewing_apks[@]} -eq 1 ]] || { echo "Expected one Chewing APK, found ${#chewing_apks[@]}." >&2; exit 1; }
+
+          mkdir -p release-assets
+          cp "${app_apks[0]}" "release-assets/duo-deck-${GITHUB_REF_NAME}-arm64-v8a.apk"
+          cp "${chewing_apks[0]}" "release-assets/duo-deck-chewing-${GITHUB_REF_NAME}-arm64-v8a.apk"
+
+          apksigner="$ANDROID_HOME/build-tools/36.1.0/apksigner"
+          verify_apk() {
+            local apk="$1"
+            local output
+            local actual_digest
+            output=$("$apksigner" verify --verbose --print-certs "$apk")
+            printf '%s\n' "$output"
+            actual_digest=$(printf '%s\n' "$output" | sed -n 's/^Signer #1 certificate SHA-256 digest: //p' | tr '[:upper:]' '[:lower:]')
+            if [[ "$actual_digest" != "$EXPECTED_SIGN_CERT_SHA256" ]]; then
+              echo "Unexpected signing certificate for $apk." >&2
+              exit 1
+            fi
+          }
+
+          verify_apk "release-assets/duo-deck-${GITHUB_REF_NAME}-arm64-v8a.apk"
+          verify_apk "release-assets/duo-deck-chewing-${GITHUB_REF_NAME}-arm64-v8a.apk"
+
+          (
+            cd release-assets
+            sha256sum ./*.apk > SHA256SUMS.txt
+          )
+
+      - name: Upload signed build artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: duo-deck-${{ github.ref_name }}-release-apks
+          path: release-assets/
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag="$GITHUB_REF_NAME"
+          version="${tag#v}"
+
+          cat > release-notes.md <<EOF
+          ## 安裝
+
+          這是供 Surface Duo 使用的 ARM64 release build。請同時安裝 Duo Deck 主程式與 Chewing 注音外掛，再依 README 手動啟用輸入法及 Duo Deck Notebook 無障礙服務。
+
+          ## Install
+
+          This is an ARM64 release build for Surface Duo. Install both the Duo Deck app and Chewing plugin, then follow the README to manually enable the IME and Duo Deck Notebook Accessibility service.
+
+          Source commit: \`$GITHUB_SHA\`
+          Signing certificate SHA-256: \`$EXPECTED_SIGN_CERT_SHA256\`
+          EOF
+
+          prerelease_args=()
+          if [[ "$version" == *-* ]]; then
+            prerelease_args+=(--prerelease)
+          fi
+
+          if ! gh release view "$tag" >/dev/null 2>&1; then
+            gh release create "$tag" \
+              --verify-tag \
+              --draft \
+              --title "Duo Deck $version" \
+              --notes-file release-notes.md
+          fi
+
+          gh release upload "$tag" release-assets/* --clobber
+          gh release edit "$tag" \
+            --title "Duo Deck $version" \
+            --notes-file release-notes.md \
+            --draft=false \
+            "${prerelease_args[@]}"
