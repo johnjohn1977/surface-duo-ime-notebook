@@ -3,7 +3,7 @@
 # SPDX-FileCopyrightText: Copyright 2026 Surface Duo IME Notebook Contributors
 
 [versions]
-androidGradlePlugin = "9.3.1"
+androidGradlePlugin = "9.4.1"
 kotlin = "2.4.10"
 ksp = "2.3.10"
 lifecycle = "2.11.0"
