@@ -6,3 +6,7 @@ Files: app/lint-baseline.xml
 Copyright: 2021-2026 Fcitx5 for Android Contributors
            2026 Surface Duo IME Notebook Contributors
 License: LGPL-2.1-or-later
+
+Files: docs/images/*.png
+Copyright: 2026 Surface Duo IME Notebook Contributors
+License: LGPL-2.1-or-later
