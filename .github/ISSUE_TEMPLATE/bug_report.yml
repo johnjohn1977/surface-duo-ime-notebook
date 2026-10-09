@@ -1,0 +1,82 @@
+# SPDX-License-Identifier: LGPL-2.1-or-later
+# SPDX-FileCopyrightText: Copyright 2026 Surface Duo IME Notebook Contributors
+
+name: 問題回報 / Bug report
+description: 回報 Duo Deck 鍵盤、中文輸入或觸控板問題
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        請勿貼上裝置序號、密碼、私鑰或含敏感內容的完整 log。
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 問題描述 / Summary
+      description: 說明實際發生什麼，以及你原本預期的行為。
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 功能區域 / Area
+      options:
+        - Notebook keyboard
+        - Chinese / Zhuyin input
+        - Candidate selection
+        - Touchpad / pointer
+        - Scroll controls
+        - Full-screen IME mode
+        - Accessibility setup
+        - Build / installation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 重現步驟 / Steps to reproduce
+      placeholder: |
+        1. 開啟…
+        2. 切換到…
+        3. 點擊或滑動…
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: App 版本或 commit
+      placeholder: 例如 duodeck21 或 Git commit SHA
+    validations:
+      required: true
+
+  - type: input
+    id: android
+    attributes:
+      label: Android 版本
+    validations:
+      required: true
+
+  - type: dropdown
+    id: posture
+    attributes:
+      label: 使用模式 / Posture
+      options:
+        - Notebook mode (上下雙螢幕)
+        - Full-screen app with IME
+        - Book mode
+        - Other / unknown
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 截圖或經過遮蔽的 log / Evidence
+      description: 上傳前請移除序號、帳號、輸入內容與其他個人資料。

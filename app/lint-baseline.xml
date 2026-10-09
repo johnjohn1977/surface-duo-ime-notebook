@@ -1,0 +1,3500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 9.3.1" type="baseline" client="gradle" dependencies="false" name="AGP (9.3.1)" variant="all" version="9.3.1">
+
+    <issue
+        id="DefaultUncaughtExceptionDelegation"
+        message="Must call `getDefaultUncaughtExceptionHandler()` to get the existing handler, and call `existingHandler.uncaughtException(thread, throwable)` from your new handler"
+        errorLine1="            Thread.setDefaultUncaughtExceptionHandler { _, e ->"
+        errorLine2="            ^">
+        <location
+            file="src/main/java/org/fcitx/fcitx5/android/FcitxApplication.kt"
+            line="92"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UseAppTint"
+        message="Must use `app:tint` instead of `android:tint`"
+        errorLine1="        android:tint=&quot;?android:attr/colorAccent&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_setup.xml"
+            line="47"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="StringFormatMatches"
+        message="Suspicious argument type for formatting argument #1 in `removed_n_items`: conversion is `s`, received `int` (argument #2 in method call) (Did you mean formatting character `d`, &apos;o&apos; or `x`?)"
+        errorLine1="                showSnackbar(ctx.getString(R.string.removed_n_items, indexed.size)) {"
+        errorLine2="                                                                     ~~~~~~~~~~~~">
+        <location
+            file="src/main/java/org/fcitx/fcitx5/android/ui/common/BaseDynamicListUi.kt"
+            line="160"
+            column="70"/>
+        <location
+            file="src/main/res/values-ja/strings.xml"
+            line="227"
+            column="5"
+            message="Conflicting argument declaration here"/>
+    </issue>
+
+    <issue
+        id="StringFormatMatches"
+        message="Inconsistent formatting types for argument #1 in format string `removed_n_items` (&apos;%1$s&apos;): Found both &apos;`s`&apos; here and &apos;`d`&apos; in values/strings.xml"
+        errorLine1="    &lt;string name=&quot;removed_n_items&quot;>%1$s 個のアイテムを削除しました&lt;/string>"
+        errorLine2="                                   ~~~~">
+        <location
+            file="src/main/res/values-ja/strings.xml"
+            line="227"
+            column="36"/>
+        <location
+            file="src/main/res/values/strings.xml"
+            line="232"
+            column="5"
+            message="Conflicting argument type (`d&apos;) here"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;hide_key_config&quot; is not translated in &quot;de&quot; (German)"
+        errorLine1="    &lt;string name=&quot;hide_key_config&quot;>Hide hotkey configurations&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="14"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;button_haptic_feedback&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;button_haptic_feedback&quot;>Haptic feedback on keypress&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="16"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;button_up_haptic_feedback&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;button_up_haptic_feedback&quot;>Haptic feedback on keyup&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="17"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;button_vibration_milliseconds&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;button_vibration_milliseconds&quot;>Keypress vibration duration&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="18"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;button_press&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;button_press&quot;>Press&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="19"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;button_long_press&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;button_long_press&quot;>Long press&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="20"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;button_vibration_amplitude&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;button_vibration_amplitude&quot;>Keypress vibration amplitude&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="21"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;delete_and_sync_data_message&quot; is not translated in &quot;de&quot; (German) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;delete_and_sync_data_message&quot;>Delete current data directory and synchronize from assets bundled in app&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="26"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;enable_ime_hint&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;enable_ime_hint&quot;>Enable &amp;lt;b>%1$s&amp;lt;/b> in Language and input settings&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="28"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;select_ime_hint&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;select_ime_hint&quot;>Select &amp;lt;b>%1$s&amp;lt;/b> as your default input method&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="30"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;setup_keyboard&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;setup_keyboard&quot;>Finish setting up the keyboard&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="34"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;setup_channel&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;setup_channel&quot;>Setup Wizard&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="35"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;pinyin_dict&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;pinyin_dict&quot;>Pinyin Dictionaries&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="36"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;reloading&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;reloading&quot;>Reloading&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="37"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;importing&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;importing&quot;>Importing&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="38"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;synced&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;synced&quot;>Synced!&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="44"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;clipboard_listening&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;clipboard_listening&quot;>Clipboard listening&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="46"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;clipboard_limit&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;clipboard_limit&quot;>Clipboard history limit&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="47"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;clipboard_enable&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;clipboard_enable&quot;>Enable Clipboard&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="48"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;expanded_candidate_style&quot; is not translated in &quot;de&quot; (German) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;expanded_candidate_style&quot;>Expanded candidate style&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="49"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;expanded_candidate_style_grid&quot; is not translated in &quot;de&quot; (German) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;expanded_candidate_style_grid&quot;>Grid&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="50"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;expanded_candidate_style_flexbox&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;expanded_candidate_style_flexbox&quot;>Flexbox&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="51"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;no_more_input_methods&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;no_more_input_methods&quot;>No more input methods to switch&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="52"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;add_more_input_methods&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;add_more_input_methods&quot;>Would you like to add more input methods?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="53"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;faq&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;faq&quot;>FAQ&lt;/string>"
+        errorLine2="            ~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="55"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;developer&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;developer&quot;>Developer&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="58"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;clear_clb_db&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;clear_clb_db&quot;>Clear clipboard database&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="59"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;unpin&quot; is not translated in &quot;de&quot; (German)"
+        errorLine1="    &lt;string name=&quot;unpin&quot;>Unpin&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="61"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;clipboard_suggestion_timeout&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;clipboard_suggestion_timeout&quot;>Clipboard suggestion timeout&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="66"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;build_time&quot; is not translated in &quot;de&quot; (German) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;build_time&quot;>Build time&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="68"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;build_git_hash&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;build_git_hash&quot;>Build Git hash&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="69"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;expanded_candidate_grid_span_count&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;expanded_candidate_grid_span_count&quot;>Number of expanded candidate spans in grid style&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="76"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;no_config_options&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;no_config_options&quot;>Currently no configuration options are available&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="77"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;unimplemented_type&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;unimplemented_type&quot;>⛔ Unimplemented type&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="78"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;text_editing&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;text_editing&quot;>Text Editing&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="80"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;instruction_enable_clipboard_listening&quot; is not translated in &quot;de&quot; (German) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;instruction_enable_clipboard_listening&quot;>To use clipboard management, please enable clipboard listening in settings&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="81"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;instruction_copy&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;instruction_copy&quot;>Try copying something&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="82"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;app_crash_message&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;app_crash_message&quot;>Sorry, but we bring you some logs to investigate.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="86"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;verbose_log_summary&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;verbose_log_summary&quot;>Requires restart&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="89"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;removed_x&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;removed_x&quot;>Removed %1$s&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="90"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;added_x&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;added_x&quot;>Added %1$s&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="91"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;edited_x&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;edited_x&quot;>Edited %1$s&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="92"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;keyboard_long_press_delay&quot; is not translated in &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;keyboard_long_press_delay&quot;>Key long press delay&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="94"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;quickphrase_editor&quot; is not translated in &quot;de&quot; (German)"
+        errorLine1="    &lt;string name=&quot;quickphrase_editor&quot;>Quick Phrase Editor&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="95"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;quickphrase_already_exists&quot; is not translated in &quot;de&quot; (German)"
+        errorLine1="    &lt;string name=&quot;quickphrase_already_exists&quot;>Quick phrase already exists&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="96"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;invalid_quickphrase&quot; is not translated in &quot;de&quot; (German) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;invalid_quickphrase&quot;>Invalid quick phrase type&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="97"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;create_new&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;create_new&quot;>Create new&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="98"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;theme&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;theme&quot;>Theme&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="105"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;key_ripple_effect&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;key_ripple_effect&quot;>Enable key ripple effect&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="106"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;key_border&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;key_border&quot;>Enable key border&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="107"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;brightness&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;brightness&quot;>Brightness&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="108"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;key_radius&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;key_radius&quot;>Key radius&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="109"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;text_editing_button_radius&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;text_editing_button_radius&quot;>Text editing button radius&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="110"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;clipboard_entry_radius&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;clipboard_entry_radius&quot;>Clipboard entry radius&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="111"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;key_horizontal_margin&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;key_horizontal_margin&quot;>Key horizontal margin&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="112"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;key_vertical_margin&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;key_vertical_margin&quot;>Key vertical margin&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="113"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;configure&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;configure&quot;>Configure&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="114"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;choose_image&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;choose_image&quot;>Choose Image…&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="115"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;dark_keys&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;dark_keys&quot;>Dark Keys&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="116"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;recrop_image&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;recrop_image&quot;>Re-Crop Image&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="117"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;navbar_background&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;navbar_background&quot;>Navigation bar background&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="118"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;navbar_bkg_none&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;navbar_bkg_none&quot;>No background&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="119"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;navbar_bkg_color_only&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;navbar_bkg_color_only&quot;>Follow keyboard color&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="120"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;navbar_bkg_full&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;navbar_bkg_full&quot;>Keyboard background image&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="121"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;punctuation_position&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;punctuation_position&quot;>Punctuation position&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="122"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;punctuation_pos_bottom&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;punctuation_pos_bottom&quot;>Bottom (Portrait only)&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="123"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;punctuation_pos_top_right&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;punctuation_pos_top_right&quot;>Top Right&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="124"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;punctuation_pos_none&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;punctuation_pos_none&quot;>None&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="125"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;expand_toolbar_by_default&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;expand_toolbar_by_default&quot;>Expand toolbar by default&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="126"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;popup_on_key_press&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;popup_on_key_press&quot;>Popup on key press&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="127"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;disable_animation&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;disable_animation&quot;>Disable animation&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="128"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;import_from_file&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;import_from_file&quot;>Import from file…&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="129"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;duplicate_builtin_theme&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;duplicate_builtin_theme&quot;>Duplicate builtin theme…&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="130"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_logcat_created&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_logcat_created&quot;>Logcat process is already created&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="131"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_quickphrase_parse&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_quickphrase_parse&quot;>Failed to parse quick phrase line: %1$s&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="132"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_quickphrase_filename&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_quickphrase_filename&quot;>The filename extension of %1$s does not indicate a quick phrase&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="133"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_theme_filename&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_theme_filename&quot;>The filename extension of %1$s does not indicate a theme&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="134"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_theme_unknown&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_theme_unknown&quot;>Theme %1$s is unknown&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="135"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_libime_dict_filename&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_libime_dict_filename&quot;>The filename extension of %1$s does not indicate a libime dict&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="136"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_text_dict_filename&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_text_dict_filename&quot;>The filename extension of %1$s does not indicate a text dict&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="137"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_sougou_dict_filename&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_sougou_dict_filename&quot;>The filename extension of %1$s does not indicate a sogou dict&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="138"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_dict_filename&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_dict_filename&quot;>The filename extension of %1$s does not indicate a dict&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="139"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_theme_json&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_theme_json&quot;>Unable to find theme json&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="140"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_theme_name_clash&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_theme_name_clash&quot;>Theme name clashes with builtin themes&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="141"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_theme_src_image&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_theme_src_image&quot;>Unable to save source image of theme background&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="142"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_theme_cropped_image&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_theme_cropped_image&quot;>Unable to save cropped image of theme background&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="143"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;follow_system_day_night_theme&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;follow_system_day_night_theme&quot;>Follow system day/night theme&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="144"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;follow_system_day_night_theme_summary&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;follow_system_day_night_theme_summary&quot;>Override manual theme selection&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="145"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;light_mode_theme&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;light_mode_theme&quot;>Light mode theme&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="146"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;dark_mode_theme&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;dark_mode_theme&quot;>Dark mode theme&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="147"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;new_theme&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;new_theme&quot;>New theme&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="148"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;skip&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;skip&quot;>Skip&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="149"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;horizontal_candidate_growth&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;horizontal_candidate_growth&quot;>Stretch horizontal candidates to fill the remaining width&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="150"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;none&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;none&quot;>None&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="151"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;theme_migrated&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;theme_migrated&quot;>Theme has been migrated to the current version&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="152"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;keep_keyboard_letters_uppercase&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;keep_keyboard_letters_uppercase&quot;>Keep keyboard letters uppercase&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="153"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;choose_input_method&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;choose_input_method&quot;>Choose input method&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="154"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;edit_clipboard&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;edit_clipboard&quot;>Edit clipboard&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="155"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;clipboard_edit_text_hint&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;clipboard_edit_text_hint&quot;>Clipboard content&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="156"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;config_addon_not_loaded&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;config_addon_not_loaded&quot;>No configuration options available, maybe this addon is disabled when fcitx starts?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="157"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;portrait&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;portrait&quot;>Portrait&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="158"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;landscape&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;landscape&quot;>Landscape&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="159"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;keyboard_bottom_padding&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;keyboard_bottom_padding&quot;>Keyboard bottom padding&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="160"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;keyboard_side_padding&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;keyboard_side_padding&quot;>Keyboard side padding&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="161"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;clipboard_suggestion&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;clipboard_suggestion&quot;>Show clipboard suggestions&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="162"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;disable_addon_warn_title&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;disable_addon_warn_title&quot;>Disable Addon&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="163"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;disable_addon_warn_name&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;disable_addon_warn_name&quot;>Disabling %1$s will also:&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="164"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;disable_addon_warn_dep&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;disable_addon_warn_dep&quot;>Disable %1$s&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="165"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;disable_addon_warn_optdep&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;disable_addon_warn_optdep&quot;>Disable some features in %1$s&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="166"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;disable_addon_warn_confirm&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;disable_addon_warn_confirm&quot;>Are you sure you want to disable it?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="167"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;swipe_symbol_behavior&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;swipe_symbol_behavior&quot;>Swipe to input punctuations and digits&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="168"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;swipe_down&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;swipe_down&quot;>Swipe down&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="169"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;swipe_up&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;swipe_up&quot;>Swipe up&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="170"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;disabled&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;disabled&quot;>Disabled&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="171"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;system_default&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;system_default&quot;>System default&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="172"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;editor_info_inspector&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;editor_info_inspector&quot;>EditorInfo Inspector&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="173"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;default_&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;default_&quot;>Default&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="174"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;saving&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;saving&quot;>Saving&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="175"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;delete_all_pinned_items&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;delete_all_pinned_items&quot;>Delete all pinned items?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="176"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;vivo_keypress_workaround&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;vivo_keypress_workaround&quot;>vivo Origin OS keypress workaround&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="177"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;invalid_im&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;invalid_im&quot;>Invalid input method configuration file:\n%1$s&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="178"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;invalid_table_dict&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;invalid_table_dict&quot;>Invalid dictionary:\n%1$s&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="179"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_table_im&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_table_im&quot;>Configuration file of table-based input method (.conf or .conf.in) not found&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="180"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_table&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_table&quot;>Dictionary of table-based input method (.dict or .txt) not found&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="181"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;table_im&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;table_im&quot;>Table-based Input Methods&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="182"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;manage_table_im&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;manage_table_im&quot;>Manage Table-based Input Methods&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="183"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_table_im_filename&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_table_im_filename&quot;>The extension of \&quot;%1$s\&quot; does not indicate a table input method package (.zip)&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="184"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;table_already_exists&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;table_already_exists&quot;>Configuration file of table-based input method \&quot;%1$s\&quot; already exists&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="185"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;table_file_does_not_exist_title&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;table_file_does_not_exist_title&quot;>Table unavailable&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="186"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;table_file_does_not_exist_message&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;table_file_does_not_exist_message&quot;>Dictionary of table-based input methods \&quot;%1$s\&quot; does not exist. Please check the dict file or re-import.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="187"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;import_table&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;import_table&quot;>Import Table&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="188"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;table_from_zip&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;table_from_zip&quot;>From zip…&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="189"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;table_select_files&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;table_select_files&quot;>From separate files…&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="190"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;table_file_placeholder&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;table_file_placeholder&quot;>Select file…&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="191"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;table_conf_select_title&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;table_conf_select_title&quot;>Input method configuration file (.conf or .conf.in)&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="192"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;table_dict_select_title&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;table_dict_select_title&quot;>Dictionary file (.dict or .txt)&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="193"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_table_conf_filename&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_table_conf_filename&quot;>The extension of \&quot;%1$s\&quot; does not indicate a configuration file of table-based input method (.conf or .conf.in)&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="194"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_table_dict_filename&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_table_dict_filename&quot;>The extension of \&quot;%1$s\&quot; does not indicate a dictionary file of table-based input method (.dict or .txt)&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="195"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_table_import_both_files&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_table_import_both_files&quot;>Please select both of above files to import&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="196"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;notification_permission_message&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;notification_permission_message&quot;>Without the permission to post notifications, we are not able to notify you when some time-consuming operations are done.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="197"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;notification_permission_title&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;notification_permission_title&quot;>No Notification Permission&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="198"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;toolbar_num_row_on_password&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;toolbar_num_row_on_password&quot;>Show number row on toolbar when inputting password&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="199"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;space_long_press_behavior&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;space_long_press_behavior&quot;>Space key long press behavior&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="200"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;space_behavior_none&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;space_behavior_none&quot;>None&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="201"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;space_behavior_enumerate&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;space_behavior_enumerate&quot;>Enumerate input methods&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="202"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;space_behavior_activate&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;space_behavior_activate&quot;>Toggle input method activate state&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="203"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;space_behavior_picker&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;space_behavior_picker&quot;>Show input method picker dialog&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="204"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;show_lang_switch_key&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;show_lang_switch_key&quot;>Show language switch key&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="205"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;horizontal_candidate_style&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;horizontal_candidate_style&quot;>Horizontal candidate style&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="206"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;horizontal_candidate_never_fill&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;horizontal_candidate_never_fill&quot;>Never fill width&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="207"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;horizontal_candidate_auto_fill&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;horizontal_candidate_auto_fill&quot;>Fill width on demand&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="208"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;horizontal_candidate_always_fill&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;horizontal_candidate_always_fill&quot;>Always fill width&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="209"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;inline_suggestions&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;inline_suggestions&quot;>Show inline autofill suggestions&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="210"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;delete_all_except_pinned&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;delete_all_except_pinned&quot;>Delete all items except pinned ones?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="211"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;num_items_deleted&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;num_items_deleted&quot;>%1$d item(s) deleted&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="212"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;delete_theme&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;delete_theme&quot;>Delete Theme&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="213"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;delete_theme_msg&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;delete_theme_msg&quot;>Do you really want to delete theme \&quot;%1$s\&quot;?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="214"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;capture_heap_dump&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;capture_heap_dump&quot;>Capture heap dump&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="215"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;plugins&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;plugins&quot;>Plugins&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="216"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;plugins_loaded&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;plugins_loaded&quot;>Loaded&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="217"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;plugins_failed&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;plugins_failed&quot;>Load failed&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="218"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;missing_plugin_descriptor&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;missing_plugin_descriptor&quot;>Missing plugin descriptor&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="219"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;invalid_plugin_descriptor&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;invalid_plugin_descriptor&quot;>Invalid plugin descriptor&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="220"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;missing_data_descriptor&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;missing_data_descriptor&quot;>Missing data descriptor&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="221"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;invalid_data_descriptor&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;invalid_data_descriptor&quot;>Invalid data descriptor&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="222"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;incompatible_api&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;incompatible_api&quot;>Incompatible API: %1$s&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="223"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;path_conflict&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;path_conflict&quot;>Path \&quot;%1$s\&quot; is already owned by %2$s&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="224"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;main_program&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;main_program&quot;>main program&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="225"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;edit_theme&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;edit_theme&quot;>Edit Theme&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="226"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;show_voice_input_button&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;show_voice_input_button&quot;>Show voice input button&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="227"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;fcitx_daemon&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;fcitx_daemon&quot;>Fcitx Daemon&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="228"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;restarting_fcitx&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;restarting_fcitx&quot;>Restarting Fcitx&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="229"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;plugin_needs_reload&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;plugin_needs_reload&quot;>Plugin changes detected, click here to reload&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="230"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;no_plugins&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;no_plugins&quot;>No plugins available&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="231"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;removed_n_items&quot; is not translated in &quot;ko&quot; (Korean) or &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;removed_n_items&quot;>Removed %1$d item(s)&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="232"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;whether_reset_switch_preference&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;whether_reset_switch_preference&quot;>Would you like to reset this preference to default?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="233"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;enabled&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;enabled&quot;>Enabled&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="234"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;following_system_settings&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;following_system_settings&quot;>Follow system settings&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="235"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;button_sound&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;button_sound&quot;>Sound on keypress&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="236"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;button_sound_volume&quot; is not translated in &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;button_sound_volume&quot;>Keypress sound volume&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="237"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;clipboard_return_after_paste&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;clipboard_return_after_paste&quot;>Return after pasting&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="238"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;theme_message_follow_system_day_night_mode_enabled&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;theme_message_follow_system_day_night_mode_enabled&quot;>Cannot switch theme manually while \&quot;Follow system day/night mode\&quot; is enabled.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="239"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;disable_it&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;disable_it&quot;>Disable it&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="240"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;reset_keyboard_on_focus_change&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;reset_keyboard_on_focus_change&quot;>Switch back to keyboard when the focus changes&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="241"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;export_user_data&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;export_user_data&quot;>Export user data&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="242"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;import_user_data&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;import_user_data&quot;>Import user data&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="243"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_user_data_filename&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_user_data_filename&quot;>The filename extension of %1$s does not indicate fcitx5-android user data&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="244"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_user_data_metadata&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_user_data_metadata&quot;>Unable to find metadata of user data&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="245"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;exception_user_data_package_name_mismatch&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;exception_user_data_package_name_mismatch&quot;>User data does not match current application&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="246"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;user_data_imported&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;user_data_imported&quot;>User data on %1$s has been imported, restarting…&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="247"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;confirm_import_user_data&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;confirm_import_user_data&quot;>Import user data would override local settings and input history, and requires restarting the App for changes to take effect. Proceed?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="248"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;restart_channel&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;restart_channel&quot;>App restart&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="249"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;restart_notify_msg&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;restart_notify_msg&quot;>App has been restarted, click here to open&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="250"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;i_do_not_need_it&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;i_do_not_need_it&quot;>I don\&apos;t need it&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="251"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;grant_permission&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;grant_permission&quot;>Grant permission&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="252"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;clear_clp_db_confirm&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;clear_clp_db_confirm&quot;>Clipboard database would be completely cleared, including pinned items. Proceed?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="253"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;expand_keypress_area&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;expand_keypress_area&quot;>Expand keypress area to the edge&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="254"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;update_table&quot; is not translated in &quot;de&quot; (German) or &quot;ko&quot; (Korean)"
+        errorLine1="    &lt;string name=&quot;update_table&quot;>Update table&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="255"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;table_dict_replace_message&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;table_dict_replace_message&quot;>Dictionary of table-based input method \&quot;%1$s\&quot; exists. You may import a new dict and replace it.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="256"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;lang_switch_key_behavior&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;lang_switch_key_behavior&quot;>Language switch key behavior&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="257"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;lang_switch_behavior_next_ime_app&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;lang_switch_behavior_next_ime_app&quot;>Switch to next input method App&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="258"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;cannot_be_empty&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;cannot_be_empty&quot;>Cannot be empty&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="259"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;_cannot_be_empty&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;_cannot_be_empty&quot;>%1$s cannot be empty&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="260"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;action_forget_candidate_word&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;action_forget_candidate_word&quot;>Forget word&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="261"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;clipboard_mask_sensitive&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;clipboard_mask_sensitive&quot;>Mask sensitive data (such as passwords)&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="262"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;open_rime_user_data_dir&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;open_rime_user_data_dir&quot;>Application data directory will be opened. RIME user data directory is located in \&quot;data/rime\&quot;.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="263"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;restart_to_apply_settings&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;restart_to_apply_settings&quot;>Application will restart to apply new settings. Proceed?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="264"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;space_swipe_move_cursor&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;space_swipe_move_cursor&quot;>Swipe on space key to move cursor&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="265"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;please_wait&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;please_wait&quot;>Please wait…&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="266"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;rotate&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;rotate&quot;>Rotate&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="267"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;flip&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;flip&quot;>Flip&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="268"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;flip_horizontally&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;flip_horizontally&quot;>Flip horizontally&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="269"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;flip_vertically&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;flip_vertically&quot;>Flip vertically&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="270"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;crop&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;crop&quot;>Crop&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="271"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;candidates_window&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;candidates_window&quot;>Candidates Window&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="272"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;show_candidates_window&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;show_candidates_window&quot;>Show candidates window&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="273"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;candidates_window_radius&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;candidates_window_radius&quot;>Candidates window radius&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="274"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;follow_input_device&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;follow_input_device&quot;>Depends on input device&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="275"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;candidates_orientation&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;candidates_orientation&quot;>Candidates list orientation&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="276"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;automatic&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;automatic&quot;>Automatic&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="277"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;horizontal&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;horizontal&quot;>Horizontal&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="278"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;vertical&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;vertical&quot;>Vertical&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="279"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;candidates_font_size&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;candidates_font_size&quot;>Candidate word font size&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="280"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;candidates_padding&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;candidates_padding&quot;>Candidate word padding&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="281"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;candidates_window_min_width&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;candidates_window_min_width&quot;>Candidate window minimum width&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="282"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;candidates_window_padding&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;candidates_window_padding&quot;>Candidate window padding&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="283"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;restart_fcitx_instance&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;restart_fcitx_instance&quot;>Restart fcitx instance&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="284"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;restart_fcitx_instance_confirm&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;restart_fcitx_instance_confirm&quot;>Fcitx instance will be destroyed and reinitialized. Proceed?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="285"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;ignore_system_window_insets&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;ignore_system_window_insets&quot;>Ignore system WindowInsets&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="286"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;browse_user_data_dir&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;browse_user_data_dir&quot;>Browse user data directory&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="287"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;haptic_on_repeat&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;haptic_on_repeat&quot;>Haptic feedback on key repeat&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="288"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;redo&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;redo&quot;>Redo&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="289"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;status_area&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;status_area&quot;>Status area&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="290"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;expand_candidates_list&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;expand_candidates_list&quot;>Expand candidates list&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="291"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;hide_candidates_list&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;hide_candidates_list&quot;>Hide candidates list&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="292"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;switch_to_voice_input&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;switch_to_voice_input&quot;>Switch to voice input&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="293"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;hide_keyboard&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;hide_keyboard&quot;>Hide keyboard&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="294"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;private_mode&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;private_mode&quot;>Private mode (tap to toggle toolbar)&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="295"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;hide_toolbar&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;hide_toolbar&quot;>Hide toolbar&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="296"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;expand_toolbar&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;expand_toolbar&quot;>Expand toolbar&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="297"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;back_to_keyboard&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;back_to_keyboard&quot;>Back to keyboard&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="298"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;backspace&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;backspace&quot;>Backspace&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="299"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;move_cursor_up&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;move_cursor_up&quot;>Move cursor up&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="300"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;move_cursor_right&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;move_cursor_right&quot;>Move cursor right&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="301"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;move_cursor_down&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;move_cursor_down&quot;>Move cursor down&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="302"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;move_cursor_left&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;move_cursor_left&quot;>Move cursor left&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="303"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;move_cursor_to_start&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;move_cursor_to_start&quot;>Move cursor to start&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="304"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;move_cursor_to_end&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;move_cursor_to_end&quot;>Move cursor to end&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="305"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;open_input_method_settings&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;open_input_method_settings&quot;>Open input method settings&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="306"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;delete_all&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;delete_all&quot;>Delete all&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="307"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;share&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;share&quot;>Share&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="308"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;emoji_and_symbols&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;emoji_and_symbols&quot;>Emoji &amp;amp; Symbols&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="309"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;default_emoji_skin_tone&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;default_emoji_skin_tone&quot;>Default emoji skin tone modifier&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="310"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;emoji_skin_tone_none&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;emoji_skin_tone_none&quot;>No modifier&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="311"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;emoji_skin_tone_type_1_2&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;emoji_skin_tone_type_1_2&quot;>🏻 Type-1-2&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="312"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;emoji_skin_tone_type_3&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;emoji_skin_tone_type_3&quot;>🏼 Type-3&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="313"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;emoji_skin_tone_type_4&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;emoji_skin_tone_type_4&quot;>🏽 Type-4&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="314"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;emoji_skin_tone_type_5&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;emoji_skin_tone_type_5&quot;>🏾 Type-5&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="315"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;emoji_skin_tone_type_6&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;emoji_skin_tone_type_6&quot;>🏿 Type-6&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="316"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;hide_unsupported_emojis&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;hide_unsupported_emojis&quot;>Hide unsupported Emojis&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="317"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;key_border_stroke&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;key_border_stroke&quot;>Enable stroke for key border&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="318"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;preferred_voice_input&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;preferred_voice_input&quot;>Preferred voice input&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="319"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;edit_text_playground&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;edit_text_playground&quot;>EditText Playground&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="320"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;keyboard_height_percent_base&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;keyboard_height_percent_base&quot;>Keyboard height percent base&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="321"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;display_metrics&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;display_metrics&quot;>Display metrics (Resources.getDisplayMetrics)&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="322"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;real_size&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;ko&quot; (Korean), &quot;ja&quot; (Japanese), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;real_size&quot;>Real size (Display.getRealSize)&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="323"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;item&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;num_items_deleted&quot;>%1$d item(s) deleted&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="212"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="PluralsCandidate"
+        message="Formatting %d followed by words (&quot;item&quot;): This should probably be a plural rather than a string"
+        errorLine1="    &lt;string name=&quot;removed_n_items&quot;>Removed %1$d item(s)&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="232"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (4375 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector."
+        errorLine1="        android:pathData=&quot;M45,28C44.19,28 43.57,28.39 43.03,28.87C42.49,29.34 42,29.92 42,30.74L42,33L38.15,33L38.15,43.9L42,43.9L42,48L38,48C35.8,48 34.02,49.8 34.02,52L34,72C34,74.2 35.8,76 38,76L70,76C72.2,76 74,74.2 74,72L74,52C74,49.8 72.2,48 70,48L66,48L66,43.9L69.85,43.9L69.85,33L66,33L66,30.74C66,29.96 65.57,29.37 65.07,28.89C64.57,28.41 63.95,28 63.14,28L45,28zM44.99,29.64L44.99,29.64C45,29.64 45,29.64 45,29.64L45,29.64L63.14,29.64C63.19,29.64 63.58,29.78 63.86,30.05C64.14,30.32 64.29,30.69 64.29,30.74L64.29,33L43.71,33L43.71,30.74C43.71,30.74 43.87,30.35 44.19,30.07C44.49,29.8 44.92,29.65 44.99,29.64zM66.33,34.7C66.64,34.7 66.94,34.74 67.22,34.83C67.5,34.92 67.77,35.05 68.02,35.22L68.02,36.22C67.88,36.09 67.74,35.98 67.6,35.89C67.47,35.8 67.34,35.72 67.22,35.67C67.07,35.61 66.93,35.56 66.78,35.54C66.63,35.51 66.49,35.5 66.34,35.5C65.71,35.5 65.24,35.74 64.92,36.23C64.6,36.72 64.44,37.47 64.44,38.46C64.44,38.97 64.48,39.41 64.56,39.77C64.63,40.13 64.75,40.44 64.9,40.68C65.21,41.16 65.69,41.4 66.33,41.4C66.54,41.4 66.73,41.38 66.89,41.33C66.97,41.3 67.05,41.27 67.12,41.23C67.2,41.2 67.27,41.15 67.33,41.09L67.33,39.15L66.28,39.15L66.28,38.35L68.27,38.35L68.27,41.46C68,41.71 67.71,41.89 67.39,42.01C67.06,42.13 66.7,42.2 66.31,42.2C65.85,42.2 65.44,42.11 65.08,41.95C64.73,41.78 64.43,41.53 64.18,41.21C63.67,40.55 63.42,39.63 63.42,38.46C63.42,37.26 63.68,36.34 64.19,35.69C64.71,35.03 65.42,34.7 66.33,34.7zM39.73,34.82L41.2,34.82C42.3,34.82 43.11,35.11 43.64,35.7C44.16,36.28 44.42,37.2 44.42,38.44C44.42,39.66 44.16,40.57 43.64,41.16C43.11,41.75 42.3,42.04 41.2,42.04L39.73,42.04L39.73,34.82zM45.99,34.82L50.27,34.82L50.27,35.64L46.96,35.64L46.96,37.78L50.13,37.78L50.13,38.6L46.96,38.6L46.96,41.22L50.37,41.22L50.37,42.04L45.99,42.04L45.99,34.82zM51.8,34.82L53.94,34.82C54.67,34.82 55.24,34.98 55.65,35.29C56.05,35.61 56.25,36.07 56.25,36.65C56.25,36.88 56.22,37.08 56.16,37.25C56.11,37.42 56.03,37.57 55.93,37.7C55.83,37.82 55.7,37.92 55.54,38C55.38,38.08 55.2,38.14 54.98,38.17C55.46,38.24 55.83,38.45 56.1,38.78C56.37,39.11 56.5,39.54 56.5,40.06C56.5,40.71 56.28,41.2 55.86,41.54C55.42,41.87 54.78,42.04 53.94,42.04L51.8,42.04L51.8,34.82zM57.67,34.82L58.66,34.82L58.66,39.71C58.66,40.06 58.67,40.31 58.69,40.46C58.7,40.61 58.74,40.73 58.79,40.81C58.89,41 59.04,41.15 59.24,41.24C59.43,41.34 59.66,41.39 59.94,41.39C60.22,41.39 60.46,41.34 60.65,41.24C60.85,41.14 61,40.99 61.1,40.81C61.16,40.72 61.19,40.6 61.21,40.47C61.22,40.32 61.23,40.07 61.23,39.72L61.23,34.82L62.21,34.82L62.21,39.27C62.21,39.69 62.2,40.02 62.17,40.26C62.15,40.5 62.11,40.69 62.08,40.84C61.99,41.15 61.83,41.41 61.6,41.61C61.5,41.71 61.38,41.79 61.24,41.87C61.12,41.94 60.99,41.99 60.86,42.04C60.74,42.08 60.61,42.11 60.46,42.14C60.3,42.17 60.13,42.18 59.94,42.18C59.61,42.18 59.3,42.13 59.03,42.04C58.9,41.99 58.77,41.94 58.64,41.87C58.5,41.79 58.39,41.71 58.28,41.61C58.18,41.52 58.09,41.42 58.02,41.29C57.94,41.17 57.87,41.02 57.82,40.84C57.77,40.67 57.73,40.47 57.71,40.23C57.68,39.99 57.67,39.66 57.67,39.27L57.67,34.82zM40.71,35.62L40.71,41.24L41.18,41.24C42.01,41.24 42.58,41.03 42.9,40.63C43.23,40.22 43.39,39.49 43.39,38.43C43.39,37.36 43.23,36.62 42.91,36.22C42.74,36.02 42.51,35.87 42.22,35.77C41.93,35.67 41.58,35.62 41.18,35.62L40.71,35.62zM52.78,35.62L52.78,37.8L53.92,37.8C54.4,37.8 54.74,37.71 54.95,37.52C55.15,37.34 55.26,37.05 55.26,36.66C55.26,36.29 55.16,36.02 54.95,35.86C54.74,35.7 54.4,35.62 53.92,35.62L52.78,35.62zM52.78,38.59L52.78,41.24L53.94,41.24C54.5,41.24 54.91,41.14 55.15,40.94C55.4,40.74 55.52,40.41 55.52,39.96C55.52,39.49 55.39,39.14 55.13,38.92C54.88,38.7 54.48,38.59 53.94,38.59L52.78,38.59zM43.71,43.9L64.29,43.9L64.29,49.88C64.29,50.28 63.91,51.16 63.16,52.11C62.42,53.05 61.35,54.09 60.2,55.03C59.04,55.98 57.78,56.83 56.65,57.43C55.52,58.04 54.49,58.36 54,58.36C53.52,58.36 52.48,58.04 51.35,57.43C50.22,56.83 48.96,55.98 47.81,55.03C46.65,54.09 45.59,53.05 44.84,52.11C44.09,51.16 43.71,50.28 43.71,49.88L43.71,43.9zM40,54L44,54L44,58L40,58L40,54zM64,54L68,54L68,58L64,58L64,54zM62,55.7L62,58L58.95,58C57.96,58.71 60.91,56.59 61.3,56.28C61.54,56.09 61.77,55.9 62,55.7zM46,55.7C46.23,55.9 46.46,56.09 46.69,56.28C47.46,56.88 48.24,57.46 49.05,58L46,58L46,55.7zM40,60L44,60L44,64L40,64L40,60zM46,60L50,60L50,64L46,64L46,60zM52,60L54,60L56,60L56,64L52,64L52,60zM58,60L62,60L62,64L58,64L58,60zM64,60L68,60L68,64L64,64L64,60zM46,68L62,68L62,72L46,72L46,68z&quot; />"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/ic_launcher_foreground_monochrome_debug.xml"
+            line="8"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (3009 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector."
+        errorLine1="        android:pathData=&quot;M 11.962891 1.8300781 C 11.280225 2.7687433 10.404556 3.6206731 9.3378906 4.3886719 C 8.2854479 5.1566707 7.1343661 5.8329054 5.8828125 6.4160156 C 4.6312589 6.9849036 3.3659354 7.4544416 2.0859375 7.8242188 C 2.3988259 8.1371072 2.7105492 8.5069278 3.0234375 8.9335938 C 3.3363259 9.3460376 3.5793336 9.7231201 3.75 10.064453 C 4.3457516 9.8449656 4.9348402 9.6069967 5.5195312 9.3515625 L 5.5195312 11.941406 C 5.5195312 12.552961 5.4851735 13.221934 5.4140625 13.947266 C 5.3429515 14.658376 5.192399 15.383492 4.9648438 16.123047 C 4.7515107 16.862601 4.4325254 17.580456 4.0058594 18.277344 C 3.5791934 18.974232 2.9954137 19.621418 2.2558594 20.21875 C 2.440748 20.332528 2.6619692 20.495652 2.9179688 20.708984 C 3.1739683 20.922318 3.4222851 21.143538 3.6640625 21.371094 C 3.9058399 21.598648 4.083488 21.798083 4.1972656 21.96875 C 4.9937088 21.314529 5.648157 20.567626 6.1601562 19.728516 C 6.4665624 19.22635 6.7294035 18.713946 6.9492188 18.191406 L 6.9492188 22.224609 L 9.1679688 22.224609 L 9.1679688 21.669922 L 16.720703 21.669922 L 16.720703 22.074219 L 19.044922 22.074219 L 19.044922 16.443359 L 7.5214844 16.443359 C 7.5970814 16.143121 7.6620166 15.843969 7.71875 15.546875 L 18.640625 15.546875 L 18.640625 9.1699219 C 19.287329 9.4236888 19.941778 9.6439643 20.603516 9.8300781 C 20.731516 9.5883007 20.894639 9.3235065 21.09375 9.0390625 C 21.292861 8.7546185 21.504867 8.471944 21.732422 8.1875 C 21.959977 7.903056 22.166674 7.6673105 22.351562 7.4824219 C 21.455564 7.2975333 20.574585 7.0637408 19.707031 6.7792969 C 18.853699 6.4806307 18.028865 6.1451678 17.232422 5.7753906 C 16.450201 5.3913912 15.732346 4.9726885 15.078125 4.5175781 C 14.610001 4.1919269 14.192351 3.857793 13.826172 3.5175781 C 13.977221 3.3409837 14.124768 3.1620066 14.267578 2.9804688 L 11.962891 1.8300781 z M 12.298828 5.09375 C 12.570528 5.3622305 12.857346 5.6249348 13.158203 5.8828125 C 13.85509 6.4801449 14.600041 7.0276137 15.396484 7.5253906 C 16.192928 8.0231676 17.032286 8.470919 17.914062 8.8691406 C 18.082732 8.9425933 18.252165 9.013262 18.421875 9.0820312 L 13.257812 9.0820312 L 14.074219 8.5273438 C 13.860885 8.2144554 13.549163 7.8591591 13.136719 7.4609375 C 12.738497 7.0484938 12.361415 6.6931974 12.005859 6.3945312 L 10.234375 7.5039062 C 10.604152 7.8452391 10.981234 8.2368462 11.365234 8.6777344 C 11.492454 8.8190894 11.609479 8.9531645 11.714844 9.0820312 L 8.0585938 9.0820312 L 7.546875 9.0820312 L 6.1191406 9.0820312 C 6.6565901 8.8343057 7.1888152 8.5714646 7.7167969 8.2929688 C 9.011017 7.596081 10.212934 6.8075576 11.322266 5.9257812 C 11.660425 5.6561099 11.986435 5.3788812 12.298828 5.09375 z M 8.0585938 10.746094 L 16.1875 10.746094 L 16.1875 11.535156 L 8.0585938 11.535156 L 8.0585938 10.746094 z M 8.0253906 13.029297 L 16.1875 13.029297 L 16.1875 13.882812 L 7.953125 13.882812 C 7.9837151 13.5909 8.0080782 13.306272 8.0253906 13.029297 z M 9.1679688 18.298828 L 16.720703 18.298828 L 16.720703 19.791016 L 9.1679688 19.791016 L 9.1679688 18.298828 z&quot; />"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/ic_status_cangjie.xml"
+            line="8"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (4367 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector."
+        errorLine1="        android:pathData=&quot;M 9.359375 2.9394531 C 9.373597 3.1243417 9.373597 3.3363476 9.359375 3.578125 C 9.3451523 3.8056802 9.3306283 4.0196392 9.3164062 4.21875 C 9.2804936 4.5778762 9.240154 4.9609059 9.1933594 5.3671875 C 8.911201 5.3697785 8.6252931 5.3710938 8.3359375 5.3710938 C 7.9092715 5.3710938 7.4324714 5.3565697 6.90625 5.328125 C 6.3942508 5.2854585 5.9101885 5.2418854 5.4550781 5.1992188 C 5.0141899 5.1565522 4.6661558 5.1149323 4.4101562 5.0722656 L 4.4746094 7.546875 C 4.8159422 7.561097 5.2075493 7.5828835 5.6484375 7.6113281 C 6.0893257 7.6255508 6.5370771 7.6381218 6.9921875 7.6523438 C 7.4615201 7.6665658 7.8802228 7.6738281 8.25 7.6738281 C 8.472866 7.6738281 8.7001754 7.6740248 8.9316406 7.671875 C 8.87682 8.2424762 8.8271567 8.8260593 8.7832031 9.4238281 C 8.7603446 9.734704 8.7420732 10.043626 8.7265625 10.351562 C 8.1952816 10.598111 7.6878707 10.892803 7.2050781 11.236328 C 6.4797459 11.762549 5.8325599 12.360854 5.2636719 13.029297 C 4.7090061 13.683518 4.275779 14.386848 3.9628906 15.140625 C 3.6500022 15.88018 3.4941406 16.627083 3.4941406 17.380859 C 3.4941406 18.461747 3.7768151 19.252223 4.3457031 19.75 C 4.9145911 20.233555 5.5908259 20.474609 6.3730469 20.474609 C 7.2974899 20.474609 8.2002549 20.282437 9.0820312 19.898438 C 9.2893027 19.806317 9.4928368 19.710299 9.6894531 19.611328 C 9.7777732 19.927934 9.8661289 20.223387 9.9570312 20.496094 L 12.410156 19.75 C 12.239634 19.238431 12.078629 18.704486 11.927734 18.150391 C 12.446861 17.715736 12.970424 17.196365 13.498047 16.591797 C 14.180713 15.795354 14.813374 14.870803 15.396484 13.818359 C 15.768709 13.153673 16.10582 12.448698 16.40625 11.701172 C 16.476913 11.730066 16.545934 11.758806 16.613281 11.791016 C 17.281725 12.089682 17.780311 12.495813 18.107422 13.007812 C 18.448755 13.50559 18.619141 14.060321 18.619141 14.671875 C 18.619141 15.368763 18.419706 16.044997 18.021484 16.699219 C 17.637485 17.35344 17.019348 17.915433 16.166016 18.384766 C 15.326906 18.839876 14.217444 19.144337 12.837891 19.300781 L 14.246094 21.541016 C 15.995424 21.270794 17.382252 20.801256 18.40625 20.132812 C 19.430249 19.450147 20.162628 18.6471 20.603516 17.722656 C 21.044404 16.783991 21.263672 15.810557 21.263672 14.800781 C 21.263672 13.69145 20.96452 12.716063 20.367188 11.876953 C 19.769855 11.023621 18.945021 10.354648 17.892578 9.8710938 C 17.651353 9.7587425 17.403065 9.6604658 17.146484 9.5742188 C 17.166976 9.5123163 17.188734 9.4474692 17.210938 9.3808594 L 17.53125 8.484375 L 14.927734 7.8671875 C 14.913512 8.0947427 14.871892 8.3992037 14.800781 8.7832031 C 14.780426 8.9155109 14.758504 9.0401969 14.736328 9.1542969 C 14.609622 9.1496665 14.480992 9.1464844 14.351562 9.1464844 C 13.540897 9.1464844 12.716062 9.2244152 11.876953 9.3808594 C 11.634161 9.4269061 11.397718 9.4785318 11.166016 9.5332031 C 11.174938 9.3978187 11.184851 9.261 11.195312 9.125 C 11.234425 8.6087112 11.280011 8.1041508 11.332031 7.609375 C 12.101599 7.5699941 12.88085 7.5198235 13.669922 7.4609375 C 14.637031 7.3898265 15.561583 7.3046335 16.443359 7.2050781 C 17.339358 7.0913005 18.15693 6.9697966 18.896484 6.8417969 L 18.875 4.3671875 C 17.239447 4.7654091 15.582517 5.0355124 13.904297 5.1777344 C 13.17948 5.233017 12.422 5.2771875 11.630859 5.3085938 C 11.696913 4.8845844 11.763634 4.4923798 11.833984 4.1328125 C 11.876651 3.9763683 11.920224 3.8059823 11.962891 3.6210938 C 12.019781 3.4219829 12.075926 3.2152861 12.132812 3.0019531 L 9.359375 2.9394531 z M 14.027344 11.324219 C 13.703232 12.101885 13.334181 12.791299 12.921875 13.392578 C 12.422777 14.135916 11.888817 14.800004 11.318359 15.384766 C 11.164807 14.332412 11.087891 13.155212 11.087891 11.855469 C 11.087891 11.833103 11.087846 11.811446 11.087891 11.789062 C 11.245299 11.739605 11.408468 11.690594 11.578125 11.642578 C 12.305124 11.440634 13.121927 11.335 14.027344 11.324219 z M 8.6835938 12.898438 C 8.7016592 13.728862 8.7564033 14.553724 8.8476562 15.375 C 8.9270431 16.001274 9.0202127 16.604604 9.1269531 17.181641 C 9.0059187 17.252928 8.8837004 17.318571 8.7617188 17.380859 C 8.0932754 17.70797 7.5041867 17.871094 6.9921875 17.871094 C 6.3379663 17.871094 6.0097656 17.523059 6.0097656 16.826172 C 6.0097656 16.342617 6.1675803 15.816934 6.4804688 15.248047 C 6.7933572 14.679159 7.2265842 14.138952 7.78125 13.626953 C 8.0620922 13.360513 8.3626444 13.117478 8.6835938 12.898438 z&quot; />"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/ic_status_hiragana.xml"
+            line="8"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (3123 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector."
+        errorLine1="        android:pathData=&quot;M 18.576172 2 C 18.43395 2.4693326 18.256302 2.9877526 18.042969 3.5566406 C 17.829636 4.1255286 17.601152 4.6802595 17.359375 5.2207031 C 17.172555 5.6273115 16.985648 6.0043943 16.798828 6.3515625 L 13.296875 6.3515625 L 14.927734 5.6699219 C 14.828178 5.3428113 14.679579 4.9729907 14.480469 4.5605469 C 14.281358 4.1481031 14.060137 3.7274472 13.818359 3.3007812 C 13.576582 2.8598931 13.335527 2.4629769 13.09375 2.1074219 L 10.896484 2.9609375 C 11.12404 3.3449369 11.343308 3.7636396 11.556641 4.21875 C 11.784196 4.6738604 11.990893 5.1143496 12.175781 5.5410156 C 12.306472 5.8325559 12.413193 6.1026591 12.494141 6.3515625 L 9.8515625 6.3515625 L 9.8515625 8.7617188 L 12.068359 8.7617188 L 12.068359 12.068359 L 9.1894531 12.068359 L 9.1894531 14.523438 L 11.951172 14.523438 C 11.888879 15.193535 11.757189 15.875078 11.556641 16.570312 C 11.343308 17.295645 11.009798 17.986404 10.554688 18.640625 C 10.099577 19.294846 9.4814397 19.869411 8.6992188 20.367188 C 8.8983295 20.509409 9.1030732 20.687057 9.3164062 20.900391 C 9.5439614 21.127946 9.7579205 21.356429 9.9570312 21.583984 C 10.156142 21.811539 10.312004 22.010974 10.425781 22.181641 C 11.293336 21.541641 11.998619 20.831049 12.539062 20.048828 C 13.093729 19.252385 13.512431 18.420288 13.796875 17.552734 C 14.095541 16.68518 14.294976 15.816773 14.394531 14.949219 C 14.412979 14.806249 14.429856 14.664912 14.445312 14.523438 L 16.847656 14.523438 L 16.847656 22.009766 L 19.386719 22.009766 L 19.386719 14.523438 L 21.96875 14.523438 L 21.96875 12.068359 L 19.386719 12.068359 L 19.386719 8.7617188 L 21.476562 8.7617188 L 21.476562 6.3515625 L 19.404297 6.3515625 C 19.440937 6.2885317 19.476547 6.2251253 19.513672 6.1601562 C 19.798116 5.648157 20.090006 5.1152127 20.388672 4.5605469 C 20.687339 3.9916589 20.979228 3.436928 21.263672 2.8964844 L 18.576172 2 z M 4.5605469 2.0644531 L 4.5605469 6.0957031 L 2.3417969 6.0957031 L 2.3417969 8.4433594 L 4.5605469 8.4433594 L 4.5605469 12.263672 C 3.5876013 12.51233 2.7337183 12.719193 2 12.880859 L 2.5546875 15.333984 C 3.1836321 15.150139 3.8526049 14.955548 4.5605469 14.751953 L 4.5605469 19.023438 C 4.5605469 19.165662 4.531498 19.265379 4.4746094 19.322266 C 4.4319428 19.364932 4.3467498 19.386719 4.21875 19.386719 L 3.515625 19.386719 C 3.1742922 19.386719 2.8170428 19.379454 2.4472656 19.365234 C 2.617932 19.72079 2.7684846 20.139492 2.8964844 20.623047 C 3.0244841 21.106602 3.1096771 21.519995 3.1523438 21.861328 C 3.8350094 21.861328 4.4168358 21.825017 4.9003906 21.753906 C 5.3981676 21.697018 5.8188235 21.562943 6.1601562 21.349609 C 6.4872669 21.150499 6.7137971 20.865871 6.8417969 20.496094 C 6.9697967 20.126316 7.0351562 19.634992 7.0351562 19.023438 L 7.0351562 14.027344 C 7.6462991 13.844036 8.2499121 13.659871 8.8476562 13.476562 L 8.5273438 11.173828 C 8.0270729 11.316763 7.5304393 11.455803 7.0351562 11.59375 L 7.0351562 8.4433594 L 8.7832031 8.4433594 L 8.7832031 6.0957031 L 7.0351562 6.0957031 L 7.0351562 2.0644531 L 4.5605469 2.0644531 z M 14.564453 8.7617188 L 16.847656 8.7617188 L 16.847656 12.068359 L 14.564453 12.068359 L 14.564453 8.7617188 z&quot; />"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/ic_status_pinyin.xml"
+            line="8"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (3649 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector."
+        errorLine1="        android:pathData=&quot;M 6.03125 2.1074219 L 3.8984375 2.9804688 C 4.2539925 3.4782457 4.5875022 4.0402388 4.9003906 4.6660156 C 5.1586621 5.1601001 5.3608935 5.6025425 5.5039062 5.9902344 L 3.109375 5.9902344 L 3.109375 8.3144531 L 7.078125 8.3144531 L 7.078125 9.53125 C 7.078125 10.043249 7.0563385 10.632338 7.0136719 11.300781 C 7.0109676 11.364331 7.0077675 11.429691 7.0039062 11.494141 L 2.4257812 11.494141 L 2.4257812 13.818359 L 6.6542969 13.818359 C 6.4980169 14.459594 6.2771525 15.121304 5.9902344 15.802734 C 5.6489016 16.599178 5.1721015 17.387701 4.5605469 18.169922 C 3.9489923 18.952143 3.1730401 19.706309 2.234375 20.431641 C 2.5757077 20.616529 2.9382662 20.864846 3.3222656 21.177734 C 3.7204872 21.504845 4.0196392 21.803997 4.21875 22.074219 C 5.2000818 21.249331 6.0176538 20.390139 6.671875 19.494141 C 7.2745996 18.66867 7.7633496 17.835589 8.1367188 16.998047 C 8.2877825 17.150001 8.4389565 17.306847 8.5917969 17.466797 C 9.2033515 18.092574 9.7726064 18.710711 10.298828 19.322266 C 10.825049 19.919598 11.23649 20.459804 11.535156 20.943359 L 13.519531 19.279297 C 13.178199 18.809964 12.730447 18.284282 12.175781 17.701172 C 11.621115 17.103839 11.024764 16.512798 10.384766 15.929688 C 9.8966617 15.463771 9.4292152 15.028395 8.984375 14.623047 C 9.0281814 14.453436 9.0677101 14.285198 9.1035156 14.117188 C 9.1265169 14.016968 9.1488185 13.917251 9.1699219 13.818359 L 13.732422 13.818359 L 13.732422 11.494141 L 9.5 11.494141 C 9.5488583 10.77985 9.5742188 10.132665 9.5742188 9.5527344 L 9.5742188 8.3144531 L 13.158203 8.3144531 L 13.158203 5.9902344 L 11.181641 5.9902344 C 11.330314 5.7113447 11.483357 5.4121927 11.642578 5.09375 C 12.012355 4.3399734 12.367652 3.5785457 12.708984 2.8105469 L 10.128906 2.1699219 C 10.029351 2.5965879 9.8860605 3.0661258 9.7011719 3.578125 C 9.5162833 4.075902 9.3241108 4.5744886 9.125 5.0722656 C 8.9896156 5.4010564 8.8541344 5.7074706 8.71875 5.9902344 L 6.2636719 5.9902344 L 7.8242188 5.2851562 C 7.6677746 4.844268 7.4194578 4.325848 7.078125 3.7285156 C 6.7510144 3.1311832 6.4010272 2.5909767 6.03125 2.1074219 z M 20.539062 3.0019531 L 20.132812 3.109375 L 19.642578 3.109375 L 14.203125 3.109375 L 14.203125 22.074219 L 16.677734 22.074219 L 16.677734 5.4980469 L 19.189453 5.4980469 C 19.025431 6.0292226 18.843068 6.6057354 18.640625 7.2265625 C 18.427292 7.8665615 18.206071 8.5064854 17.978516 9.1464844 C 17.765183 9.7722612 17.551224 10.341516 17.337891 10.853516 C 18.205445 11.678403 18.781962 12.466926 19.066406 13.220703 C 19.365074 13.97448 19.520936 14.643453 19.535156 15.226562 C 19.535156 15.59634 19.493536 15.902754 19.408203 16.144531 C 19.337092 16.372087 19.208326 16.549734 19.023438 16.677734 C 18.90966 16.73462 18.782847 16.776241 18.640625 16.804688 C 18.512625 16.833134 18.376597 16.854921 18.234375 16.869141 C 18.063708 16.883361 17.878798 16.890625 17.679688 16.890625 C 17.480577 16.876405 17.261309 16.854619 17.019531 16.826172 C 17.232864 17.181727 17.388726 17.602383 17.488281 18.085938 C 17.587839 18.569493 17.643983 18.988195 17.658203 19.34375 L 18.554688 19.34375 C 18.853354 19.34375 19.123457 19.329228 19.365234 19.300781 C 19.948344 19.215449 20.439669 19.030538 20.837891 18.746094 C 21.236112 18.46165 21.528002 18.057471 21.712891 17.53125 C 21.912001 17.005028 22.009766 16.35058 22.009766 15.568359 C 22.009766 15.084805 21.953621 14.578956 21.839844 14.052734 C 21.726066 13.526513 21.519369 12.971783 21.220703 12.388672 C 20.922037 11.79134 20.474286 11.173202 19.876953 10.533203 C 20.289397 9.6229825 20.717315 8.5987135 21.158203 7.4609375 C 21.613314 6.3089394 22.032016 5.2140019 22.416016 4.1757812 L 20.539062 3.0019531 z&quot; />"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/ic_status_zhengma.xml"
+            line="8"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_baseline_developer_mode_24` appears to be unused"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/ic_baseline_developer_mode_24.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_baseline_settings_backup_restore_24` appears to be unused"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/ic_baseline_settings_backup_restore_24.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.mipmap.ic_launcher_debug` appears to be unused">
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher_debug.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_launcher_foreground_debug` appears to be unused"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/ic_launcher_foreground_debug.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_launcher_foreground_monochrome_debug` appears to be unused"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/ic_launcher_foreground_monochrome_debug.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.mipmap.ic_launcher_round` appears to be unused">
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher_round.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.mipmap.ic_launcher_round_debug` appears to be unused">
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher_round_debug.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.app_name_release` appears to be unused"
+        errorLine1="    &lt;string name=&quot;app_name_release&quot;>Fcitx5&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="3"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.app_name_debug` appears to be unused"
+        errorLine1="    &lt;string name=&quot;app_name_debug&quot;>Fcitx5 (Debug)&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="4"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.add_input_method` appears to be unused"
+        errorLine1="    &lt;string name=&quot;add_input_method&quot;>Add Input Method&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="7"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.conf` appears to be unused"
+        errorLine1="    &lt;string name=&quot;conf&quot;>Configuration&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="9"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.behavior` appears to be unused"
+        errorLine1="    &lt;string name=&quot;behavior&quot;>Behavior&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="11"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.import_` appears to be unused"
+        errorLine1="    &lt;string name=&quot;import_&quot;>Import&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="43"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.verbose_log_summary` appears to be unused"
+        errorLine1="    &lt;string name=&quot;verbose_log_summary&quot;>Requires restart&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="89"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.invalid_quickphrase` appears to be unused"
+        errorLine1="    &lt;string name=&quot;invalid_quickphrase&quot;>Invalid quick phrase type&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="97"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.exception_theme_unknown` appears to be unused"
+        errorLine1="    &lt;string name=&quot;exception_theme_unknown&quot;>Theme %1$s is unknown&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="135"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.horizontal_candidate_growth` appears to be unused"
+        errorLine1="    &lt;string name=&quot;horizontal_candidate_growth&quot;>Stretch horizontal candidates to fill the remaining width&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="150"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.cannot_be_empty` appears to be unused"
+        errorLine1="    &lt;string name=&quot;cannot_be_empty&quot;>Cannot be empty&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="259"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.action_forget_candidate_word` appears to be unused"
+        errorLine1="    &lt;string name=&quot;action_forget_candidate_word&quot;>Forget word&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="261"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.restart_to_apply_settings` appears to be unused"
+        errorLine1="    &lt;string name=&quot;restart_to_apply_settings&quot;>Application will restart to apply new settings. Proceed?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="264"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.edit_text_playground` appears to be unused"
+        errorLine1="    &lt;string name=&quot;edit_text_playground&quot;>EditText Playground&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="320"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="TypographyDashes"
+        message="Replace &quot;-&quot; with an &quot;en dash&quot; character (–, &amp;#8211;) ?"
+        errorLine1="    &lt;string name=&quot;emoji_skin_tone_type_1_2&quot;>🏻 Type-1-2&lt;/string>"
+        errorLine2="                                            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-ru/strings.xml"
+            line="312"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TypographyDashes"
+        message="Replace &quot;-&quot; with an &quot;en dash&quot; character (–, &amp;#8211;) ?"
+        errorLine1="    &lt;string name=&quot;emoji_skin_tone_type_1_2&quot;>🏻 浅肤色 (Type-1-2)&lt;/string>"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-zh-rCN/strings.xml"
+            line="312"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TypographyDashes"
+        message="Replace &quot;-&quot; with an &quot;en dash&quot; character (–, &amp;#8211;) ?"
+        errorLine1="    &lt;string name=&quot;emoji_skin_tone_type_1_2&quot;>🏻 淺膚色 (Type-1-2)&lt;/string>"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-zh-rTW/strings.xml"
+            line="312"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TypographyDashes"
+        message="Replace &quot;-&quot; with an &quot;en dash&quot; character (–, &amp;#8211;) ?"
+        errorLine1="    &lt;string name=&quot;emoji_skin_tone_type_1_2&quot;>🏻 Type-1-2&lt;/string>"
+        errorLine2="                                            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="312"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;choose_image&quot;>Elegir imagen...&lt;/string>"
+        errorLine2="                                ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-es/strings.xml"
+            line="73"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;import_from_file&quot;>Importar desde archivo...&lt;/string>"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-es/strings.xml"
+            line="82"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;choose_image&quot;>Bild wählen ...&lt;/string>"
+        errorLine2="                                ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="97"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;table_from_zip&quot;>Desde ZIP...&lt;/string>"
+        errorLine2="                                  ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-es/strings.xml"
+            line="100"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;table_select_files&quot;>Desde archivos separados...&lt;/string>"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-es/strings.xml"
+            line="101"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;table_file_placeholder&quot;>Seleccionar archivo...&lt;/string>"
+        errorLine2="                                          ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-es/strings.xml"
+            line="102"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;import_from_file&quot;>Aus Dataei importieren ...&lt;/string>"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="105"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;table_from_zip&quot;>Aus ZIP-Datei...&lt;/string>"
+        errorLine2="                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="141"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;table_select_files&quot;>Aus getrennten Dateien ...&lt;/string>"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="142"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;table_file_placeholder&quot;>Datei auswählen ...&lt;/string>"
+        errorLine2="                                          ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-de/strings.xml"
+            line="143"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_setup.xml"
+            line="9"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_setup.xml"
+            line="40"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`Gravity.END`&quot; instead of &quot;`Gravity.RIGHT`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="            singleSideBorderDrawable(dp(1), theme.dividerColor, Gravity.RIGHT, inset)"
+        errorLine2="                                                                        ~~~~~">
+        <location
+            file="src/main/java/org/fcitx/fcitx5/android/input/candidates/expanded/ExpandedCandidateLayout.kt"
+            line="127"
+            column="73"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`Gravity.END`&quot; instead of &quot;`Gravity.RIGHT`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="            singleSideBorderDrawable(dp(1), theme.dividerColor, Gravity.RIGHT, inset)"
+        errorLine2="                                                                        ~~~~~">
+        <location
+            file="src/main/java/org/fcitx/fcitx5/android/input/candidates/expanded/ExpandedCandidateLayout.kt"
+            line="127"
+            column="73"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`Gravity.START`&quot; instead of &quot;`Gravity.LEFT`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="                singleSideBorderDrawable(dp(1), theme.dividerColor, Gravity.LEFT, inset)"
+        errorLine2="                                                                            ~~~~">
+        <location
+            file="src/main/java/org/fcitx/fcitx5/android/input/candidates/expanded/ExpandedCandidateLayout.kt"
+            line="131"
+            column="77"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`Gravity.START`&quot; instead of &quot;`Gravity.LEFT`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="                singleSideBorderDrawable(dp(1), theme.dividerColor, Gravity.LEFT, inset)"
+        errorLine2="                                                                            ~~~~">
+        <location
+            file="src/main/java/org/fcitx/fcitx5/android/input/candidates/expanded/ExpandedCandidateLayout.kt"
+            line="131"
+            column="77"/>
+    </issue>
+
+</issues>

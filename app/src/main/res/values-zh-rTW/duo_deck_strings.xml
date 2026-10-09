@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  SPDX-License-Identifier: LGPL-2.1-or-later
+  SPDX-FileCopyrightText: Copyright 2026 Surface Duo IME Notebook Contributors
+-->
+<resources>
+    <string name="duo_deck_engine_name">Duo Deck（Fcitx）</string>
+    <string name="duo_deck_panel_name">Duo Deck 筆電鍵盤</string>
+    <string name="duo_deck_accessibility_service_description">提供限制在工作螢幕內的虛擬指標與觸控手勢；不讀取或儲存畫面內容。</string>
+    <string name="duo_deck_touchpad_hint">觸控板  •  雙指點擊為右鍵</string>
+    <string name="duo_deck_left_drag">左鍵／拖曳</string>
+    <string name="duo_deck_right_hold">右鍵／長按</string>
+    <string name="duo_deck_drag_armed">拖曳待命</string>
+    <string name="duo_deck_accessibility_unavailable">請啟用 Duo Deck 無障礙服務以使用指標手勢</string>
+    <string name="duo_deck_accessibility_setup_explanation">觸控板手勢需要 Duo Deck 無障礙服務</string>
+    <string name="duo_deck_enable_touchpad">啟用觸控板</string>
+    <string name="duo_deck_enable_touchpad_description">開啟無障礙設定，並啟用 Duo Deck 筆電鍵盤</string>
+    <string name="duo_deck_accessibility_settings_unavailable">這台裝置無法開啟無障礙設定</string>
+    <string name="duo_deck_ime_setup_explanation">Duo Deck 目前不是系統輸入法，因此按鍵無法輸入到其他 App。</string>
+    <string name="duo_deck_select_input_method">選擇 Duo Deck 輸入法</string>
+    <string name="duo_deck_select_input_method_description">開啟 Android 輸入法選擇器，並選擇 Duo Deck</string>
+    <string name="duo_deck_switch_to_chinese">EN → 中</string>
+    <string name="duo_deck_switch_to_english">中 → EN</string>
+    <string name="duo_deck_switch_to_chinese_description">目前是英文；切換成注音中文</string>
+    <string name="duo_deck_switch_to_english_description">目前是注音中文；切換成英文</string>
+    <string name="duo_deck_no_active_input_target">上半螢幕的 App 目前沒有文字輸入焦點</string>
+    <string name="duo_deck_chewing_missing">請安裝版本相符的 Duo Deck Chewing 外掛，再重新開啟面板</string>
+    <string name="duo_deck_previous_candidates">上一頁候選詞</string>
+    <string name="duo_deck_next_candidates">下一頁候選詞</string>
+    <string name="duo_deck_scroll_wheel_position">滾輪位置 %1$d</string>
+    <string name="duo_deck_scroll_wheel_gesture">滑動可捲動多格；按住後向上或向下移動會立即精確捲動一格；點擊頂端或底端可移動一格</string>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  SPDX-License-Identifier: LGPL-2.1-or-later
+  SPDX-FileCopyrightText: Copyright 2026 Surface Duo IME Notebook Contributors
+-->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+    <string name="duo_deck_engine_name">Duo Deck (Fcitx)</string>
+    <string name="duo_deck_panel_name">Duo Deck Notebook</string>
+    <string name="duo_deck_accessibility_service_description">Provides a bounded virtual pointer and touch gestures for Duo Deck. It does not read or store screen content.</string>
+    <string name="duo_deck_touchpad_hint">TOUCHPAD  •  two-finger tap for right click</string>
+    <string name="duo_deck_left_drag">Left / drag</string>
+    <string name="duo_deck_right_hold">Right / hold</string>
+    <string name="duo_deck_drag_armed">Drag armed</string>
+    <string name="duo_deck_accessibility_unavailable">Enable Duo Deck Accessibility for pointer gestures</string>
+    <string name="duo_deck_accessibility_setup_explanation">Touchpad gestures need Duo Deck Accessibility</string>
+    <string name="duo_deck_enable_touchpad">Enable touchpad</string>
+    <string name="duo_deck_enable_touchpad_description">Open Accessibility settings and enable Duo Deck Notebook</string>
+    <string name="duo_deck_accessibility_settings_unavailable">Accessibility settings are unavailable on this device</string>
+    <string name="duo_deck_ime_setup_explanation">Duo Deck is not the current input method, so its keys cannot type into other apps.</string>
+    <string name="duo_deck_select_input_method">Select Duo Deck input method</string>
+    <string name="duo_deck_select_input_method_description">Open Android input method picker and select Duo Deck</string>
+    <string name="duo_deck_switch_to_chinese">EN → 中</string>
+    <string name="duo_deck_switch_to_english">中 → EN</string>
+    <string name="duo_deck_switch_to_chinese_description">English active; switch to Zhuyin Chinese</string>
+    <string name="duo_deck_switch_to_english_description">Zhuyin Chinese active; switch to English</string>
+    <string name="duo_deck_no_active_input_target">The upper app has no active keyboard input target</string>
+    <string name="duo_deck_chewing_missing">Install the matching Duo Deck Chewing plugin, then reopen the panel</string>
+    <string name="duo_deck_previous_candidates">Previous candidates</string>
+    <string name="duo_deck_next_candidates">Next candidates</string>
+    <string name="duo_deck_scroll_wheel_position">Scroll wheel position %1$d</string>
+    <string name="duo_deck_scroll_wheel_gesture">Slide for multiple steps; hold, then move up or down to scroll one precise step immediately; tap either end for one step</string>
+</resources>

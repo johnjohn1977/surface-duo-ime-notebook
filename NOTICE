@@ -1,0 +1,17 @@
+SPDX-License-Identifier: LGPL-2.1-or-later
+SPDX-FileCopyrightText: Copyright 2026 Surface Duo IME Notebook Contributors
+
+Surface Duo IME Notebook
+Copyright 2026 Surface Duo IME Notebook Contributors
+
+This project is based on Fcitx5 for Android:
+https://github.com/fcitx5-android/fcitx5-android
+
+The upstream source and local modifications are distributed under the GNU
+Lesser General Public License version 2.1 or later, unless an individual file
+or pinned submodule states a different license. The complete LGPL-2.1 text is
+provided in LICENSE. Copyright and license notices in upstream files and
+submodules remain in effect.
+
+The project-specific provenance and pinned upstream revision are documented in
+UPSTREAM.md.

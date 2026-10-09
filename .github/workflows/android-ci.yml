@@ -1,0 +1,79 @@
+# SPDX-License-Identifier: LGPL-2.1-or-later
+# SPDX-FileCopyrightText: Copyright 2026 Surface Duo IME Notebook Contributors
+
+name: Android CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: android-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Verify debug build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+
+    steps:
+      - name: Check out source and submodules
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Install native build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes extra-cmake-modules gettext
+
+      - name: Set up Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v4
+
+      - name: Install pinned Android toolchain
+        run: |
+          sdkmanager \
+            'platforms;android-36' \
+            'build-tools;36.1.0' \
+            'cmake;3.31.6' \
+            'ndk;28.0.13004108'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v6
+
+      - name: Run unit tests
+        run: ./gradlew :app:testDebugUnitTest
+
+      - name: Build app and Chewing plugin
+        run: ./gradlew :app:assembleDebug :plugin:chewing:assembleDebug
+
+      - name: Run Android lint
+        run: ./gradlew :app:lintDebug
+
+      - name: Record APK checksums
+        run: find app plugin/chewing -path '*/build/outputs/apk/debug/*.apk' -type f -print0 | sort -z | xargs -0 sha256sum | tee apk-sha256.txt
+
+      - name: Upload debug APKs
+        uses: actions/upload-artifact@v7
+        with:
+          name: duo-deck-debug-apks
+          path: |
+            app/build/outputs/apk/debug/*.apk
+            plugin/chewing/build/outputs/apk/debug/*.apk
+            apk-sha256.txt
+          if-no-files-found: error
+          retention-days: 14

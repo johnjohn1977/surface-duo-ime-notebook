@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: LGPL-2.1-or-later
+# SPDX-FileCopyrightText: Copyright 2026 Surface Duo IME Notebook Contributors
+
+blank_issues_enabled: false
+contact_links:
+  - name: 安全性問題 / Security issue
+    url: https://github.com/johnjohn1977/surface-duo-ime-notebook/security/advisories/new
+    about: 請私下回報可能暴露輸入內容、權限或裝置資料的問題。

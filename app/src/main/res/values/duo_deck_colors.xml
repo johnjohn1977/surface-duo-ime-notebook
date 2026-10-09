@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  SPDX-License-Identifier: LGPL-2.1-or-later
+  SPDX-FileCopyrightText: Copyright 2026 Surface Duo IME Notebook Contributors
+-->
+<resources>
+    <color name="deck_background">#101318</color>
+    <color name="deck_surface">#1B2028</color>
+    <color name="deck_key">#2B3440</color>
+    <color name="deck_key_active">#43627C</color>
+    <color name="deck_text">#F4F7FA</color>
+    <color name="deck_muted">#A8B3BF</color>
+    <color name="deck_accent">#64B5F6</color>
+</resources>

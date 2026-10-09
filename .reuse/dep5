@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Surface Duo IME Notebook
+Source: https://github.com/johnjohn1977/surface-duo-ime-notebook
+
+Files: app/lint-baseline.xml
+Copyright: 2021-2026 Fcitx5 for Android Contributors
+           2026 Surface Duo IME Notebook Contributors
+License: LGPL-2.1-or-later
