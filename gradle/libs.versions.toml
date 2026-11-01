@@ -12,7 +12,7 @@ room = "2.8.4"
 test = "1.7.0"
 splitties = "3.0.0"
 aboutlibraries = "14.2.1"
-arrow = "2.2.3"
+arrow = "2.3.0.1"
 
 [libraries]
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
